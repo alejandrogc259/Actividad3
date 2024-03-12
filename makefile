@@ -1,6 +1,6 @@
 #Félix Expósito Durán y Alejandro Guerra Cortés
 run : actividad3
-	./actividad3 entrada2.txt salidaActividad.txt
+	./actividad3 entrada.txt salida.txt
 actividad3 : lex.yy.c estructura.cpp
 	g++ -oactividad3 lex.yy.c estructura.cpp
 
