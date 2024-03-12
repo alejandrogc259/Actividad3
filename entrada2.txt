@@ -1,0 +1,25 @@
+int main(){
+	int i;    //comienzan las declaraciones de variables
+	float num, suma1;
+
+	
+	suma1 = 1.0;
+	/* Este mensaje acaba en la misma línea */
+	num = 0.5e+2;
+	/* ahora hay  
+          un bucle */
+	for (i=0;i < 10; i++){
+		suma1 = suma1 + .5; 
+		res = num * suma1 * 2.;
+
+	}
+	if (suma < 24) {
+		num = num * 3.1e-1;
+	}
+	else 
+		num = num * 2.4e2; // cuando no se cumple
+	cout << "suma vale " << suma1 <<endl;
+	cout << "num vale " << num <<endl;
+
+	return 0;
+}
