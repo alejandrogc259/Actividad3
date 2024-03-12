@@ -1,10 +1,31 @@
-FOR (ID=ENTERO; ID < ENTERO; ID++)   
-     ID = ID * REAL + ID;
-RETURN ID;
+INT ID(){
+	INT ID;    
+	FLOAT ID, ID;
+	ID = REAL;
+		ID = REAL;
+		FOR (ID=ENTERO;ID < ENTERO; ID++){
+		ID = ID + REAL; 
+		ID = ID * ID * REAL;
+	}
+	IF (ID < ENTERO) {
+		ID = ID * REAL;
+	}
+	ELSE 
+		ID = ID * REAL; 
+	ID << TEXTO << ID <<ID;
+	ID << TEXTO << ID <<ID;
+	RETURN ENTERO;
+}
 
 Lista de identificadores:
 
-	i	3
-	x	5
+	main	1
+	i	2
+	num	3
+	suma1	3
+	res	13
+	suma	16
+	cout	21
+	endl	21
 
-Número total de líneas del fichero de entrada: 9
+Número total de líneas del fichero de entrada: 25

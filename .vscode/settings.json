@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "estructura.h": "c"
+        "estructura.h": "c",
+        "string": "cpp",
+        "ostream": "cpp"
     }
 }

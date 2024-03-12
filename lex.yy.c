@@ -354,8 +354,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 20
-#define YY_END_OF_BUFFER 21
+#define YY_NUM_RULES 21
+#define YY_END_OF_BUFFER 22
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -365,12 +365,12 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[59] =
     {   0,
-        0,    0,    0,    0,    0,    0,   21,   19,    8,   19,
-       19,   19,   16,   15,   15,   15,   15,   15,   19,    7,
-        6,    2,   20,    6,    0,   18,   17,    3,    1,   17,
-       16,   15,   15,   15,   15,   13,   15,   15,    0,    7,
-        4,    0,   17,   15,   15,   12,    9,   15,    5,    0,
-       17,   14,   15,   15,   10,   15,   11,    0
+        0,    0,    0,    0,    0,    0,   22,   20,    9,   20,
+       20,   20,   17,   16,   16,   16,   16,   16,   20,    8,
+        7,    2,    4,    7,    0,   19,   18,    3,    1,   18,
+       17,   16,   16,   16,   16,   14,   16,   16,    0,    8,
+        5,    0,   18,   16,   16,   13,   10,   16,    6,    0,
+       18,   15,   16,   16,   11,   16,   12,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -484,13 +484,12 @@ char *yytext;
 #line 2 "actividad3.l"
 #include <iostream>
 #include <string>
-#include <map>
+#include "estructura.h"
 using namespace std;
 int lineas;
-map<string, int> mapa;	
-#line 492 "lex.yy.c"
+#line 491 "lex.yy.c"
 
-#line 494 "lex.yy.c"
+#line 493 "lex.yy.c"
 
 #define INITIAL 0
 #define COM1 1
@@ -712,9 +711,9 @@ YY_DECL
 		}
 
 	{
-#line 15 "actividad3.l"
+#line 14 "actividad3.l"
 
-#line 718 "lex.yy.c"
+#line 717 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -774,114 +773,122 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 16 "actividad3.l"
+#line 15 "actividad3.l"
 BEGIN(COM1);
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 17 "actividad3.l"
+#line 16 "actividad3.l"
 {BEGIN(0);printf("\n");lineas++;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 18 "actividad3.l"
+#line 17 "actividad3.l"
 BEGIN(COM2);
 	YY_BREAK
 case 4:
+/* rule 4 can match eol */
+YY_RULE_SETUP
+#line 18 "actividad3.l"
+{lineas++;};
+	YY_BREAK
+case 5:
 YY_RULE_SETUP
 #line 19 "actividad3.l"
 BEGIN(0);
 	YY_BREAK
-case 5:
-/* rule 5 can match eol */
+case 6:
+/* rule 6 can match eol */
 YY_RULE_SETUP
 #line 20 "actividad3.l"
 {BEGIN(0);lineas++;}
 	YY_BREAK
-case 6:
+case 7:
 YY_RULE_SETUP
 #line 21 "actividad3.l"
 ;
 	YY_BREAK
-case 7:
-/* rule 7 can match eol */
+case 8:
+/* rule 8 can match eol */
 YY_RULE_SETUP
 #line 23 "actividad3.l"
 {lineas++;}
 	YY_BREAK
-case 8:
-/* rule 8 can match eol */
+case 9:
+/* rule 9 can match eol */
 YY_RULE_SETUP
 #line 24 "actividad3.l"
 {ECHO;lineas++;}
 	YY_BREAK
-case 9:
+case 10:
 YY_RULE_SETUP
 #line 25 "actividad3.l"
 {printf("INT");}
 	YY_BREAK
-case 10:
+case 11:
 YY_RULE_SETUP
 #line 26 "actividad3.l"
 {printf("FLOAT");}
 	YY_BREAK
-case 11:
+case 12:
 YY_RULE_SETUP
 #line 27 "actividad3.l"
 {printf("RETURN");}
 	YY_BREAK
-case 12:
+case 13:
 YY_RULE_SETUP
 #line 28 "actividad3.l"
 {printf("FOR");}
 	YY_BREAK
-case 13:
+case 14:
 YY_RULE_SETUP
 #line 29 "actividad3.l"
 {printf("IF");}
 	YY_BREAK
-case 14:
+case 15:
 YY_RULE_SETUP
 #line 30 "actividad3.l"
 {printf("ELSE");}
 	YY_BREAK
-case 15:
+case 16:
 YY_RULE_SETUP
 #line 31 "actividad3.l"
-{printf("ID"); if(mapa.count(yytext)==0)mapa[yytext]=lineas+1;}
+{printf("ID"); insertar(yytext, lineas+1);}
 	YY_BREAK
-case 16:
+case 17:
 YY_RULE_SETUP
 #line 32 "actividad3.l"
 {printf("ENTERO");} 
 	YY_BREAK
-case 17:
+case 18:
 YY_RULE_SETUP
 #line 33 "actividad3.l"
 {printf("REAL");}
 	YY_BREAK
-case 18:
-/* rule 18 can match eol */
+case 19:
+/* rule 19 can match eol */
 YY_RULE_SETUP
 #line 34 "actividad3.l"
 {printf("TEXTO");}
 	YY_BREAK
-case 19:
+case 20:
 YY_RULE_SETUP
 #line 35 "actividad3.l"
 {ECHO;}
 	YY_BREAK
-case 20:
-YY_RULE_SETUP
-#line 37 "actividad3.l"
-ECHO;
-	YY_BREAK
-#line 881 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(COM1):
 case YY_STATE_EOF(COM2):
-	yyterminate();
+#line 36 "actividad3.l"
+{return 0;}
+	YY_BREAK
+case 21:
+YY_RULE_SETUP
+#line 38 "actividad3.l"
+ECHO;
+	YY_BREAK
+#line 892 "lex.yy.c"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -1887,21 +1894,23 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 37 "actividad3.l"
+#line 38 "actividad3.l"
 
-int main(){
+int main(int argc, char* argv[]){
     lineas = 0;
-        
-	yylex();
-    printf("\n");
-    printf("Lista de identificadores:\n\n");
-    map<string, int>::iterator it = mapa.begin();
-    while (it != mapa.end()) {
-        cout << "\t" <<it->first
-             << "\t" << it->second << endl;
-        ++it;
+    if(argc > 1){
+        yyin = fopen(argv[1], "r");
+        yyout = freopen(argv[2], "w", stdout);
+        yylex();
+        printf("\n");
+        printf("Lista de identificadores:\n\n");
+        imprimir();
+        printf("\nNúmero total de líneas del fichero de entrada: ");
+        printf("%d",lineas);
+        printf("\n");
     }
-    printf("\nNúmero total de líneas del fichero de entrada: ");
-    printf("%d",lineas);
+    else printf("Pocos argumentos");
+        
+	
 	return 0;
 }
