@@ -1,4 +1,4 @@
-#Félix Tragapollas Tambiénlegustaelanal Alejandro Guerra Cortés
+#Félix Expósito Durán y Alejandro Guerra Cortés
 run : actividad3
 	./actividad3 entrada2.txt salidaActividad.txt
 actividad3 : lex.yy.c estructura.cpp
