@@ -12,9 +12,9 @@ float [0-9]+[.][0-9]*|[.][0-9]+
 
 
 %%
-"//"        BEGIN(COM1);
+[\t ]*"//"        BEGIN(COM1);
 <COM1>"\n"  {BEGIN(0);printf("\n");lineas++;}
-"/*"        BEGIN(COM2);
+[\t ]*"/*"        BEGIN(COM2);
 <COM2>"\n"  {lineas++;};
 <COM2>"*/"   BEGIN(0);
 <COM2>"*/""\n"  {BEGIN(0);lineas++;}
